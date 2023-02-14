@@ -33,8 +33,8 @@ mongoose.connection.on("disconnected", () => {
 // MIDDLEWARE 
 
 app.use(express.json());
-app.use(cors())
 app.use(cookieParser());
+app.use(cors())
 
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
