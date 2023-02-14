@@ -6,6 +6,7 @@ import authRouter         from "./routes/auth.js";
 import userRouter         from "./routes/user.js";
 import hotelRouter        from "./routes/hotel.js";
 import hotelroomRouter    from "./routes/hotelroom.js";
+import cookieParser from "cookie-parser";
 
 
 const app=express();
@@ -33,6 +34,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.use(express.json());
 app.use(cors())
+app.use(cookieParser());
 
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
