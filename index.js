@@ -54,7 +54,7 @@ app.use((err, req, res, next) => {
 })
 
 
-app.listen(8800, ()=>{
+app.listen(process.env.Port, ()=>{
     connect();
     console.log("CONNECTED TO BECKEND");
 })
